@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    tools:openDrawer="start"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-57dp">
+
+        <TextView
+            android:id="@+id/totalsongs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/totalsongs"
+            android:textColor="#6F6AB8"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+
+            />
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:name="com.example.ongaku.NowPlaying"
+        tools:layout = "@layout/fragment_now_playing"
+        android:id="@+id/nowplaying"
+
+        />
+    <!-- for buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#B3000000"
+        >
+
+
+        <!-- fav btn -->
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/favourites_btn"
+            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:text="@string/favourites_btn"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:id="@+id/favbtn"
+            />
+
+        <!-- playlist btn -->
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/playlist_btn"
+           android:drawableTop="@drawable/ic_baseline_playlist_play_24"
+            android:text="Playlist"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:id="@+id/playlistbtn"
+            />
+        <!-- Lyrics btn -->
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:contentDescription="@string/playlist_btn"
+            android:drawableTop="@drawable/ic_baseline_music_note_24"
+            android:text="Lyrics"
+            android:textAllCaps="false"
+            android:id="@+id/searchlyrics"
+            />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/shufflebtn"
+        android:layout_width="39dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/white"
+        app:icon="@drawable/ic_baseline_shuffle_24"
+        app:iconSize="35dp"
+        app:iconTint="#A451E6"
+        app:layout_constraintBottom_toTopOf="@+id/nowplaying"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:strokeColor="#A451E6"
+        app:strokeWidth="2dp">
+
+    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity = "start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu = "@menu/nav_menu"
+
+
+        />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+

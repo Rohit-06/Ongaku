@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="2dp"
+    android:layout_marginBottom="5dp">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/music_player_icon"
+        app:shapeAppearanceOverlay="@style/curved"
+        android:layout_marginStart="5dp"
+       android:id="@+id/imageMV"
+        />
+
+    <TextView
+        android:id="@+id/songnamemv"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/songname"
+        android:layout_toEndOf="@id/imageMV"
+         android:layout_marginStart="5dp"
+        android:layout_toStartOf="@id/songduration"
+       android:gravity="center_vertical"
+        android:singleLine="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="@string/Album"
+        android:layout_toEndOf="@id/imageMV"
+        android:layout_marginStart="5dp"
+        android:layout_toStartOf="@id/songduration"
+        android:layout_marginTop = "30dp"
+        android:id="@+id/albummv"
+        android:singleLine="true"
+        />
+    <TextView
+        android:id="@+id/songduration"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/start"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:layout_marginHorizontal="5dp"
+        android:textColor="@color/white"
+        android:singleLine="true"
+        />
+
+</RelativeLayout>

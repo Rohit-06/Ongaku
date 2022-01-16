@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NowPlaying"
+    android:background="@drawable/mainbg"
+    android:id="@+id/nowplayinglayout"
+
+
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/songimgNP"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="7dp"
+        android:src="@drawable/music_album"
+        app:shapeAppearanceOverlay="@style/curved"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+       android:src="@drawable/ic_baseline_navigate_next_24"
+        android:backgroundTint = "@android:color/transparent"
+        android:layout_centerVertical="true"
+        android:id="@+id/nextNP"
+        android:layout_marginHorizontal="5dp"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_toStartOf="@id/nextNP"
+        android:backgroundTint="@android:color/transparent"
+      android:src="@drawable/ic_baseline_play_arrow_24"
+        android:layout_centerVertical="true"
+        app:iconSize="30dp"
+        android:id="@+id/playpauseNP"
+        />
+
+    <TextView
+        android:id="@+id/songnameNP"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="3dp"
+        android:layout_toStartOf="@id/playpauseNP"
+        android:layout_toEndOf="@id/songimgNP"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="@string/songname"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        />
+
+</RelativeLayout>

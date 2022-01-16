@@ -1,0 +1,62 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:padding="2dp"
+android:layout_marginBottom="5dp">
+<com.google.android.material.imageview.ShapeableImageView
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@mipmap/music_player_icon"
+    app:shapeAppearanceOverlay="@style/curved"
+    android:layout_marginStart="5dp"
+    android:id="@+id/imagePD"
+    />
+
+<TextView
+    android:id="@+id/songnamePD"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:text="@string/songname"
+    android:layout_toEndOf="@id/imagePD"
+    android:layout_marginStart="5dp"
+    android:layout_toStartOf="@id/songdurationPD"
+    android:gravity="center_vertical"
+    android:singleLine="true"
+    />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="20dp"
+    android:text="@string/Album"
+    android:layout_toEndOf="@id/imagePD"
+    android:layout_marginStart="5dp"
+    android:layout_toStartOf="@id/songdurationPD"
+    android:layout_marginTop = "30dp"
+    android:id="@+id/albumPD"
+    android:singleLine="true"
+    />
+<TextView
+    android:id="@+id/songdurationPD"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:text="@string/start"
+    android:layout_alignParentEnd="true"
+    android:gravity="center"
+    android:layout_marginHorizontal="5dp"
+    android:textColor="@color/white"
+    android:singleLine="true"
+    />
+
+<ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignTop="@+id/imagePD"
+    android:layout_alignParentStart="true"
+    android:layout_marginStart="3dp"
+    android:layout_marginTop="53dp"
+    android:src = "@drawable/ic_baseline_delete_outline_24"
+    android:backgroundTint="@android:color/transparent"
+    android:id="@+id/delPD"
+    />
+</RelativeLayout>
